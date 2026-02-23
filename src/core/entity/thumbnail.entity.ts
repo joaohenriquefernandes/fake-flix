@@ -37,7 +37,7 @@ export class ThumbnailEntity extends BaseEntity {
     return this.url;
   }
 
-  serialize(): Record<string, unknown> {
+  serialize() {
     return {
       id: this.id,
       url: this.url,

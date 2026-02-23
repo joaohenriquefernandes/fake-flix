@@ -53,11 +53,14 @@ export class VideoEntity extends BaseEntity {
     return MAX_THUMBANIL_SIZE;
   }
 
-  serialize(): Record<string, unknown> {
+  serialize() {
     return {
       id: this.id,
       url: this.url,
       sizeInKb: this.sizeInKb,
+      duration: this.duration,
+      createdAt: this.createdAt,
+      updatedAt: this.updatedAt,
     };
   }
 

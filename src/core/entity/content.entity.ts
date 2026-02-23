@@ -53,12 +53,12 @@ export class ContentEntity extends BaseEntity {
     });
   }
 
-  serialize(): Record<string, unknown> {
+  serialize() {
     return {
       id: this.id,
       title: this.title,
       description: this.description,
-      media: this.media,
+      media: this.media?.serialize(),
       type: this.type,
       createdAt: this.createdAt,
       updatedAt: this.updatedAt,

@@ -42,7 +42,7 @@ model Movie {
   thumbnailId String?    @unique @db.Uuid
   Thumbnail   Thumbnail? @relation(fields: [thumbnailId], references: [id], onDelete: NoAction, onUpdate: NoAction)
   Content     Content?   @relation(fields: [contentId], references: [id], onDelete: NoAction, onUpdate: NoAction)
-  video       Video?
+  Video       Video?
 }
 
 model Thumbnail {
